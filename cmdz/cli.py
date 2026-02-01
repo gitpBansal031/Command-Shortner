@@ -1,5 +1,5 @@
 import sys
-from cmdz.commands.check import hello_command
+from cmdz.commands.check import check_command
 from cmdz.commands.version import version_command
 from cmdz.commands.doctor import doctor_command
 from cmdz.commands.vault import run_vault, build_list_cmd
@@ -17,7 +17,7 @@ def main():
 
     if command == "hello":
         if(isValid(sys,2,2)):
-            hello_command()
+            check_command()
     elif command == "version":
         if(isValid(sys,2,2)):
             version_command()
@@ -34,8 +34,8 @@ def main():
         if(isValid(sys,2,2)):
             get_namespace()
     elif command == "list":
-        if(isValid(sys,5,5)):
-            cmd=build_list_cmd(get_namespace,sys.argv[2],sys.argv[3])
+        if(isValid(sys,4,4)):
+            cmd=build_list_cmd(sys.argv[2],sys.argv[3])
             run_vault(cmd)
     else:
         invalid_message()
