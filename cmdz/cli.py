@@ -1,7 +1,6 @@
 import sys
-from cmdz.commands.check import check_command
+from cmdz.commands.health import check_command
 from cmdz.commands.version import version_command
-from cmdz.commands.doctor import doctor_command
 from cmdz.commands.vault import run_vault, build_list_cmd
 from cmdz.commands.config import set_namespace, get_namespace
 from cmdz.valid import isValid
@@ -15,15 +14,12 @@ def main():
 
     command = sys.argv[1]
 
-    if command == "hello":
+    if command == "health":
         if(isValid(sys,2,2)):
             check_command()
     elif command == "version":
         if(isValid(sys,2,2)):
             version_command()
-    elif command == "doctor":
-        if(isValid(sys,2,2)):
-            doctor_command()
     elif command == "login":
         if(isValid(sys,2,2)):
             run_vault('vault login -method=oidc role="default"')
