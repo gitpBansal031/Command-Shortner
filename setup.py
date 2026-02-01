@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="cmdz",
-    version="0.8",
+    version="0.1.3",
     packages=find_packages(),
     entry_points={
         "console_scripts": [

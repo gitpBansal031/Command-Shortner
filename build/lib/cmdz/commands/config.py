@@ -33,9 +33,9 @@ def get_namespace():
     config = _load_config()
     ns = config.get("namespace")
     if not ns:
-        return "Namespace not set. Run: cmdz setns <namespace>"
+        print("Namespace not set. Run: cmdz setns <namespace>")
     else:
-        return ns
+        print("Namespace:",ns)
 
 
 def set_env(env: str):
@@ -53,6 +53,6 @@ def get_env():
     config = _load_config()
     env = config.get("env")
     if not env:
-        return "Env not set. Run: cmdz setenv <env>"
+        print("Env not set. Run: cmdz setenv <env>")
     else:
-        return env
+        print("Env:",env)

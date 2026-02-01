@@ -28,13 +28,13 @@ def main():
             set_namespace(sys.argv[2])
     elif command =="getns":
         if(isValid(sys,2,2)):
-            print("Namespace:",get_namespace())
+            get_namespace()
     elif command == "setenv":
         if(isValid(sys,3,3)):
             set_env(sys.argv[2])
     elif command =="getenv":
         if(isValid(sys,2,2)):
-            print("Env:",get_env())
+            get_env()
     elif command == "list":
         if(isValid(sys,3,3)):
             cmd=build_list_cmd(sys.argv[2])

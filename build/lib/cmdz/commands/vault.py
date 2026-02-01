@@ -22,8 +22,7 @@ def run_vault(cmd: str):
 
 
 def build_list_cmd(path: str):
-    print("Env:",get_env())
-    print("Namespace:", get_namespace())
+    print("Env : ",get_env()," Namespace : ", get_namespace())
     base = f"secrets/carbon/svcs/onprem/{get_namespace()}/{get_env()}/app"
 
     # normalize path
